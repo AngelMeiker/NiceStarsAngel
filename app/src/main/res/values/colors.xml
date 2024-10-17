@@ -2,7 +2,15 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="degradado">#0c4466</color>
+    <color name="azulMarino">#0c4466</color>
     <color name="azulDiamantes">#b8fbff</color>
     <color name="verdecillo">#ebff97</color>
+    <color name="fucsiaTocho">#e17bff</color>
+    <color name="valladolid">#5f1874</color>
+    <color name="pistacho">#9fff24</color>
+    <color name="sureste">#830000</color>
+    <color name="rivas">#ff4c1c</color>
+    <color name="villarreal">#ffff21</color>
+    <color name="aqua">#21ff9d</color>
+    <color name="AzulReal">#21b2ff</color>
 </resources>
