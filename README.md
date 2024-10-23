@@ -15,6 +15,7 @@ El proyecto también está organizado en ramas
     - Incluye campos para el nombre de usuario, correo electrónico y contraseña
     - Contiene botones para registrarse y regresar a la pantalla de login
       ![img.png](img.png)
+   
 3. **Pantalla Principal (Main)**: Es la pantalla a la que se redirige después de un login
     - Contiene una barra de acción (ActionBar)
     - No permite regresar a la pantalla de Login
