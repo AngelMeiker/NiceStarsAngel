@@ -112,7 +112,9 @@
 
         android:text="LOGIN"
         app:layout_constraintHorizontal_chainStyle="packed"
-        style="@style/buttonflat_horizontal">
+        style="@style/buttonflat_horizontal"
+
+        android:onClick="openMain">
     </Button>
     <Button
 

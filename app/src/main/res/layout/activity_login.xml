@@ -84,17 +84,18 @@
 
 
     <Button
-
         android:id="@+id/loginBoton"
         app:layout_constraintStart_toStartOf="@id/guideline4"
         app:layout_constraintEnd_toStartOf="@id/guideline5"
         app:layout_constraintTop_toBottomOf="@id/til2"
 
-
         android:text="LOGIN"
         app:layout_constraintHorizontal_chainStyle="packed"
-        style="@style/buttonflat">
+        style="@style/buttonflat"
+
+        android:onClick="openMain">
     </Button>
+
     <Button
 
         android:id="@+id/button2"
