@@ -33,10 +33,10 @@ public class Login extends AppCompatActivity {
             //ImageView mLogo = findViewById(R.id.logo);
 
             Glide.with(this)
-                    .load("https://static.wikia.nocookie.net/p__/images/7/7b/Nathan_Drake_%28U4_-_ATE%29.jpg/revision/latest?cb=20230213051811&path-prefix=protagonist")
+                    .load("https://i.pinimg.com/736x/13/28/95/132895e631d37158600c91d8d70207a3.jpg")
                     .transition(DrawableTransitionOptions.withCrossFade(2000))//png
                     .centerCrop()
-                    .placeholder(new ColorDrawable(this.getResources().getColor(R.color.valladolid)))
+                    .placeholder(new ColorDrawable(this.getResources().getColor(R.color.verdecillo)))
                     .into(mGirl);
 
 

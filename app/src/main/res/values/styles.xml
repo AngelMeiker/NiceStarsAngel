@@ -4,8 +4,8 @@
     <style name="buttonflat">
         <item name="android:layout_width">0dp</item>
         <item name="android:layout_height">60dp</item>
-        <item name="android:backgroundTint">@color/azulDiamantes</item>
-        <item name="android:textColor">@color/azulMarino</item>
+        <item name="android:backgroundTint">@color/tlou</item>
+        <item name="android:textColor">@color/white</item>
         <item name="cornerRadius">8dp</item>
     </style>
 
