@@ -36,4 +36,4 @@ Esta pantalla muestra la foto de perfil de manera circular, nombre, descripción
 
 ![Pantalla de Profile](img/imgprofile.png)
 
-LA PRUEBA DEFINITIVA sin
+LA PRUEBA DEFINITIVA va
