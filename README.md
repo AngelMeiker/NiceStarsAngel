@@ -35,3 +35,5 @@ Se trata de una interfaz donde el propio logo parpadea, dándole una animación 
 Esta pantalla muestra la foto de perfil de manera circular, nombre, descripción y correo.
 
 ![Pantalla de Profile](imgProfile.png)
+
+LA PRUEBA DEFINITIVA
