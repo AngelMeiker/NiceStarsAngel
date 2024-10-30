@@ -11,29 +11,29 @@ El proyecto también está organizado en ramas.
 Permite a los usuarios ingresar sus credenciales de inicio de sesión.
 - Contiene campos de texto para el usuario y la contraseña, así como un botón para iniciar sesión.
 
-![Pantalla de Login](imgLogin.png)
+![Pantalla de Login](img/imglogin.png)
 
 ### Pantalla de Registro
 Permite a los usuarios crear una nueva cuenta.
 - Incluye campos para el nombre de usuario, correo electrónico y contraseña.
 - Contiene botones para registrarse y volver a la pantalla de login.
 
-![Pantalla de Registro](imgSingUp.png)
+![Pantalla de Registro](img/imgsingup.png)
 
 ### Pantalla Principal (Main)
 Es la pantalla a la que se redirige después de un login.
 - Simplemente no permite regresar a la pantalla de Login.
 
-![Pantalla de Main](imgMain.png)
+![Pantalla de Main](img/imgmain.png)
 
 ### Pantalla Splash
 Se trata de una interfaz donde el propio logo parpadea, dándole una animación sencilla.
 
-![Pantalla de Spash](imgSplash.png)
+![Pantalla de Spash](img/imgsplash.png)
 
 ### Pantalla Profile
 Esta pantalla muestra la foto de perfil de manera circular, nombre, descripción y correo.
 
-![Pantalla de Profile](imgProfile.png)
+![Pantalla de Profile](img/imgprofile.png)
 
 LA PRUEBA DEFINITIVA 
