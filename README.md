@@ -29,9 +29,9 @@ Es la pantalla a la que se redirige después de un login.
 ### Pantalla Splash
 Se trata de una interfaz donde el propio logo parpadea, dándole una animación sencilla.
 
-![Pantalla de Main](imgSplash.png)
+![Pantalla de Spash](imgSplash.png)
 
 ### Pantalla Profile
 Esta pantalla muestra la foto de perfil de manera circular, nombre, descripción y correo.
 
-![Pantalla de Main](imgProfile.png)
+![Pantalla de Profile](imgProfile.png)
