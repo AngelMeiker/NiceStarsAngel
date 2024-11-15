@@ -1,9 +1,7 @@
 # Nicestart
-<<<<<<< HEAD
 ![NiceStart](imagenes/logo.png "Logo")
-=======
-![Nice](https://ethic.es/wp-content/uploads/2023/03/imagen.jpg "Logo NiceStart")
->>>>>>> 925e1896ce43deae4bb52092bc07afe7695926a4
+
+
 
 
 
