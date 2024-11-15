@@ -1,5 +1,5 @@
 # Nicestart
-![NiceStart](imagenes/logo.png "Logo NiceStart")
+![NiceStart](imagenes/logo.png "Logo")
 
 
 
