@@ -1,5 +1,5 @@
 # Nicestart
-![Nice](https://www.google.com/url?sa=i&url=https%3A%2F%2Fralfvanveen.com%2Fen%2Fglossary%2Fplaceholder%2F&psig=AOvVaw0S95RswbWwVki21LhzZKTe&ust=1731755035971000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCNijxq-Y3okDFQAAAAAdAAAAABAE "Logo NiceStart")
+![Nice](https://ethic.es/wp-content/uploads/2023/03/imagen.jpg "Logo NiceStart")
 
 
 
