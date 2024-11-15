@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">NiceStart</string>
     <string name="name">Name</string>
+    <string name="copiar">Copiar</string>
+    <string name="ajustes">Ajustes</string>
+    <string name="perfil">Perfil</string>
 </resources>
