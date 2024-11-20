@@ -8,15 +8,22 @@
     tools:context=".Main"
     android:background="@drawable/gradient">
 
-    <TextView
-        android:id="@+id/textProfile"
-        android:layout_width="130dp"
-        android:layout_height="50dp"
-        android:text="PROFILE"
-        android:textSize="30sp"
-        app:layout_constraintEnd_toEndOf="parent"
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/myswipe"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/main" />
+        app:layout_constraintTop_toTopOf="parent">
+
+        <WebView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/vistaweb">
+        </WebView>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

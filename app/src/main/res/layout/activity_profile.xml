@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     tools:context=".Profile"
     android:background="@drawable/gradient">
-    >
+
 
     <ImageView
         android:id="@+id/profile"
@@ -66,4 +66,3 @@
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
-

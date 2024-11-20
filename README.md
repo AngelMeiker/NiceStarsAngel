@@ -1,10 +1,6 @@
 # Nicestart
 ![NiceStart](imagenes/logo.png "Logo")
 
-
-
-
-
 ## Descripción del Proyecto
 Nicestart es una aplicación Android simple que incluye tres pantallas principales: Login, Registro y una pantalla Main. El propósito del proyecto es ofrecer un ejemplo básico de navegación entre actividades, manejo de temas y estilos, y la integración con Git para controlar versiones.
 

@@ -1,12 +1,14 @@
 package com.agomez.nicestart;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.ContextMenu;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.TextView;
+import android.webkit.WebSettings;
+import android.webkit.WebView;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
@@ -15,114 +17,137 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
+import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 import com.google.android.material.snackbar.Snackbar;
 
 public class Main extends AppCompatActivity {
+    private WebView miVisorWeb;
+    private SwipeRefreshLayout swipeLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
+
+        setupWindowInsets();
+        initializeWebView();
+        setupSwipeRefresh();
+    }
+
+    private void setupWindowInsets() {
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
-
-        TextView texto = findViewById(R.id.textProfile);
-        registerForContextMenu(texto);
-
     }
-    public void onCreateContextMenu(ContextMenu menu, View v,
-                                    ContextMenu.ContextMenuInfo menuInfo) {
 
-        getMenuInflater().inflate(R.menu.menu_context, menu);
+    private void initializeWebView() {
+        miVisorWeb = findViewById(R.id.vistaweb);
+        registerForContextMenu(miVisorWeb);
 
+        WebSettings webSettings = miVisorWeb.getSettings();
+        webSettings.setJavaScriptEnabled(true);
+        webSettings.setBuiltInZoomControls(true);
+        webSettings.setLoadWithOverviewMode(true);
+        webSettings.setUseWideViewPort(true);
+
+        miVisorWeb.loadUrl("https://definicion.com/wp-content/uploads/2022/09/imagen.jpg.webp");
     }
+
+    private void setupSwipeRefresh() {
+        swipeLayout = findViewById(R.id.myswipe);
+        swipeLayout.setOnRefreshListener(() -> {
+            showSnackBar("Fancy a Snack while you refresh?");
+            miVisorWeb.reload();
+            swipeLayout.setRefreshing(false);
+        });
+    }
+
+    @Override
+    public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo) {
+        getMenuInflater().inflate(R.menu.menu_appbar, menu);
+    }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_appbar, menu);
         return true;
     }
+
     @Override
     public boolean onContextItemSelected(MenuItem item) {
+        int itemId = item.getItemId();
 
-        if (item.getItemId() == R.id.item1) {
-            Toast toast = Toast.makeText(this, "Item copied",
-                    Toast.LENGTH_LONG);
-            toast.show();
-
+        if (itemId == R.id.item1) {
+            showToast("Item copied");
             return true;
-        } else if (item.getItemId() == R.id.item2) {
-            Toast toast2 = Toast.makeText(this, "Downloading item...",
-                    Toast.LENGTH_LONG);
-            toast2.show();
+        } else if (itemId == R.id.item2) {
+            showToast("Downloading item...");
             return true;
-        } else {
-            return false;
+        } else if (itemId == R.id.itemS) {
+            showAlertDialogButtonClicked();
+            return true;
         }
-    }
 
+        return false;
+    }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
+        int itemId = item.getItemId();
+        ConstraintLayout layout = findViewById(R.id.main);
 
-        int id = item.getItemId();
-
-        if (id == R.id.item2) {
-
-            final ConstraintLayout mLayout = findViewById(R.id.main);
-            Snackbar snackbar = Snackbar
-                                .make(mLayout, "Perfil", Snackbar.LENGTH_LONG)
-                               .setAction("UNDO", new View.OnClickListener() {
-                                    @Override
-                                    public void onClick(View view) {
-                                        Snackbar snackbar1 = Snackbar.make(mLayout, "Perfil", Snackbar.LENGTH_SHORT);
-                                        snackbar1.show();
-                                   }
-                               });
-
-                        snackbar.show();
-
-            Intent intentMain = new Intent(this,Profile.class);
-            startActivity(intentMain);
-
+        if (itemId == R.id.item2) {
+            showSnackBarWithAction(layout, "Perfil", "UNDO");
+            Intent intent = new Intent(this,Profile.class);
+            startActivity(intent);
+            return true;
+        } else if (itemId == R.id.item3) {
+            showSnackBarWithAction(layout, "Copiado", "UNDO");
+            return true;
+        } else if (itemId == R.id.item4) {
+            showSnackBarWithAction(layout, "Ajustes", "UNDO");
+            return true;
+        } else if (itemId == R.id.itemS) {
+            showAlertDialogButtonClicked();
+            return true;
         }
-        if (id == R.id.item3) {
-            final ConstraintLayout mLayout = findViewById(R.id.main);
-            Snackbar snackbar = Snackbar
-                    .make(mLayout, "Copiado", Snackbar.LENGTH_LONG)
-                    .setAction("UNDO", new View.OnClickListener() {
-                        @Override
-                        public void onClick(View view) {
-                            Snackbar snackbar1 = Snackbar.make(mLayout, "Copiado", Snackbar.LENGTH_SHORT);
-                            snackbar1.show();
-                        }
-                    });
-
-            snackbar.show();
-        }
-        if (id == R.id.item4) {
-            final ConstraintLayout mLayout = findViewById(R.id.main);
-            Snackbar snackbar = Snackbar
-                    .make(mLayout, "Ajustes", Snackbar.LENGTH_LONG)
-                    .setAction("UNDO", new View.OnClickListener() {
-                        @Override
-                        public void onClick(View view) {
-                            Snackbar snackbar1 = Snackbar.make(mLayout, "Ajustes", Snackbar.LENGTH_SHORT);
-                            snackbar1.show();
-                        }
-                    });
-
-            snackbar.show();
-        }
-
 
         return super.onOptionsItemSelected(item);
     }
 
+    private void showAlertDialogButtonClicked() {
+        MaterialAlertDialogBuilder builder = new MaterialAlertDialogBuilder(this)
+                .setTitle("Titulo!!!")
+                .setMessage("¿A dónde vamos?")
+                .setIcon(R.drawable.user_logo)
+                .setCancelable(false)
+                .setPositiveButton("Scrolling", (dialog, which) -> {
+                    startActivity(new Intent(Main.this, Login.class)); //Hay que hacer cambio aqui
+                    dialog.dismiss();
+                })
+                .setNegativeButton("Do nothing", (dialog, which) -> dialog.dismiss());
+        builder.show();
+    }
 
+    private void showSnackBar(String message) {
+        ConstraintLayout layout = findViewById(R.id.main);
+        Snackbar.make(layout, message, Snackbar.LENGTH_SHORT).show();
+    }
+
+    private void showSnackBarWithAction(ConstraintLayout layout, String message, String action) {
+        Snackbar snackbar = Snackbar.make(layout, message, Snackbar.LENGTH_LONG)
+                .setAction(action, view -> {
+                    Snackbar.make(layout, "Action restored!", Snackbar.LENGTH_SHORT).show();
+                });
+        snackbar.show();
+    }
+
+    private void showToast(String message) {
+        Toast.makeText(this, message, Toast.LENGTH_LONG).show();
+    }
 }
