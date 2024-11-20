@@ -1,3 +1,5 @@
+//Primera pantalla - Pantalla de carga con animacion + nombre app
+
 package com.agomez.nicestart;
 
 import android.content.Intent;
@@ -43,6 +45,7 @@ public class Splash extends AppCompatActivity {
         });
         openApp();
 
+        //Animacion del logo
         ImageView thunder = findViewById(R.id.imgSplash);
 
         Animation myAnim = AnimationUtils.loadAnimation(this,R.anim.blink);
@@ -51,6 +54,7 @@ public class Splash extends AppCompatActivity {
     }
 
 
+    //Abrir la app y al ejecutarse intent para ir al login
     private void openApp(){
         Handler handler = new Handler();
         handler.postDelayed(new Runnable() {
@@ -61,6 +65,6 @@ public class Splash extends AppCompatActivity {
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
                 startActivity(intent);
             }
-        },4000); //   } --> new Runnable()
+        },4000);
     }
 }
