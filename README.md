@@ -62,3 +62,6 @@ El 2º menú nos da a elegir 3 opciones.
 Esta pantalla muestra la foto de perfil de manera circular, nombre, descripción y correo.
 
 
+Actualizaciones más adelante
+
+
