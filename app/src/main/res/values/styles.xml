@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <!-- Estilo de boton login en "Login"-->
     <style name="buttonflat">
         <item name="android:layout_width">0dp</item>
         <item name="android:layout_height">60dp</item>
@@ -9,6 +10,7 @@
         <item name="cornerRadius">8dp</item>
     </style>
 
+    <!-- Estilo de boton sign up en "Login"-->
     <style name="buttonoutlines" parent="Widget.MaterialComponents.Button.OutlinedButton">
         <item name="android:layout_width">0dp</item>
         <item name="android:layout_height">wrap_content</item>

@@ -8,7 +8,7 @@
     tools:context=".Main"
     android:background="@drawable/gradient">
 
-
+    <!-- Contenedor que refresca la página al deslizar hacia abajo -->
     <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
         android:id="@+id/myswipe"
         android:layout_width="match_parent"

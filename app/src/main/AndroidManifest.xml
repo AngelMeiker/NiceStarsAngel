@@ -2,8 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <!-- Permiso para acceder a Internet, necesario para cargar imágenes, usar APIs, etc. -->
     <uses-permission android:name="android.permission.INTERNET" />
 
+    <!-- "icon" e "iconround": iconos de la app -->
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -21,26 +23,27 @@
             android:name=".Splash"
             android:exported="true">
             <intent-filter>
+                <!-- Define esta actividad como la principal de la app -->
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".profile"
-            android:exported="true" />
+
         <activity
             android:name=".Main"
             android:exported="true"
-            android:theme="@style/Theme.NiceStart.ActionBar" />
+            android:theme="@style/Theme.NiceStart.ActionBar" /> <!-- Tema específico con barra de acción -->
+
         <activity
             android:name=".Signup"
             android:exported="true"
             android:parentActivityName=".Login"
             android:theme="@style/Theme.NiceStart.ActionBar" />
+
         <activity
             android:name=".Login"
-            android:exported="true"></activity>
+            android:exported="true">
+        </activity>
 
         <meta-data
             android:name="preloaded_fonts"
