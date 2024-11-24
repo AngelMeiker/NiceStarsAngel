@@ -26,9 +26,7 @@ public class Signup extends AppCompatActivity {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
 
-            //Glide for loading girls
             ImageView mHipman = findViewById(R.id.hipman); //id XML
-            //ImageView mLogo = findViewById(R.id.logo);
 
             Glide.with(this)
                     .load("https://res.cloudinary.com/cook-becker/image/fetch/q_auto:good,f_auto,w_1920/https://candb.com/site/candb/images/artwork/Aloy-Horizon-Zero-Dawn_Guerrilla.jpg")

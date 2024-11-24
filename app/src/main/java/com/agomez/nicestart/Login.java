@@ -22,37 +22,35 @@ public class Login extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_login);
+
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
 
-
-
-            //Glide for loading girls
-            ImageView mGirl = findViewById(R.id.girl); //id XML
-            //ImageView mLogo = findViewById(R.id.logo);
+            // Configuración de Glide para cargar una imagen en el ImageView (mGirl)
+            ImageView mGirl = findViewById(R.id.girl);
 
             Glide.with(this)
-                    .load("https://i.pinimg.com/736x/13/28/95/132895e631d37158600c91d8d70207a3.jpg")
-                    .transition(DrawableTransitionOptions.withCrossFade(2000))//png
-                    .centerCrop()
-                    .placeholder(new ColorDrawable(this.getResources().getColor(R.color.verdecillo)))
-                    .into(mGirl);
+                    .load("https://i.pinimg.com/736x/13/28/95/132895e631d37158600c91d8d70207a3.jpg") // URL
+                    .transition(DrawableTransitionOptions.withCrossFade(2000)) // Transición de 2000 ms
+                    .centerCrop() // Ajusta la imagen para cubrir el ImageView
+                    .placeholder(new ColorDrawable(this.getResources().getColor(R.color.verdecillo))) // Color de fondo temporal mientras se carga
+                    .into(mGirl); // Carga la imagen en el ImageView
 
-
-            return insets;
+            return insets; // Devuelve los insets aplicados
         });
     }
 
-    //Metodo para abrir sign up al pulsar el boton
-    public void openSignup(View v){
-        Intent intent = new Intent(Login.this,Signup.class);
-                startActivity(intent);
+    // Intent para viajar al activity "Sign Up"
+    public void openSignup(View v) {
+        Intent intent = new Intent(Login.this, Signup.class);
+        startActivity(intent);
     }
 
-    public void openMain(View v){
-        Intent intentMain = new Intent(Login.this,Main.class);
-            startActivity(intentMain);
+    // Intent para viajar al activity "Main"
+    public void openMain(View v) {
+        Intent intentMain = new Intent(Login.this, Main.class);
+        startActivity(intentMain);
     }
 
 }
