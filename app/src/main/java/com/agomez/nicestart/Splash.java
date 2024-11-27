@@ -36,7 +36,7 @@ public class Splash extends AppCompatActivity {
             // Glide: carga una imagen remota para el fondo con animaciones y placeholder
             ImageView mFondo = findViewById(R.id.fondo);
             Glide.with(this)
-                    .load("https://images.rawpixel.com/image_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIzLTEyL3Jhd3BpeGVsb2ZmaWNlM19hYnN0cmFjdF9nZW9tZXRyaWNfZmx1aWRfYmxhY2tfY29sb3JfZ3JhZGllbnRfYl9mNWYxMTRjMC01MTVlLTRkZTctYjAxMi05ZDFkODljYzEyODBfMS5qcGc.jpg")
+                    .load("https://img.freepik.com/free-vector/hexagonal-black-background-modern-design_1017-37442.jpg")
                     .transition(DrawableTransitionOptions.withCrossFade(2000)) // Transición con desvanecimiento de 2s
                     .centerCrop() // Ajusta la imagen al centro sin deformarla
                     .placeholder(new ColorDrawable(this.getResources().getColor(R.color.verdecillo))) // Imagen temporal mientras se carga
