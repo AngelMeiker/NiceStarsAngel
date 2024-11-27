@@ -54,7 +54,7 @@ public class Main extends AppCompatActivity {
         webSettings.setLoadWithOverviewMode(true); // Ajusta las páginas al tamaño de la pantalla
         webSettings.setUseWideViewPort(true); // Permite un viewport amplio
 
-        miVisorWeb.loadUrl("https://definicion.com/wp-content/uploads/2022/09/imagen.jpg.webp"); // Carga una URL
+        miVisorWeb.loadUrl("https://images.wikidexcdn.net/mwuploads/wikidex/e/e9/latest/20230922233051/Artwork_Kyurem_B2N2.png"); // Carga una URL
     }
 
     // Configura el SwipeRefreshLayout para recargar la WebView al refrescar

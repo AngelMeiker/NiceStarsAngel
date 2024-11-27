@@ -28,7 +28,7 @@ public class Profile extends AppCompatActivity {
             //ImageView mLogo = findViewById(R.id.logo);
 
             Glide.with(this)
-                    .load("https://invdes.com.mx/wp-content/uploads/2017/07/02-07-17-tesla.jpg")
+                    .load("https://static1.thegamerimages.com/wordpress/wp-content/uploads/2021/10/N-from-pokemon-black-and-white.jpg")
                     .transition(DrawableTransitionOptions.withCrossFade(2000))//png
                     .circleCrop()
                     .into(mProfile);
